@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Chalenger_Encriptador</title>
+    <script src="app.js"></script>
+</head>
+<body>
+     <header>
+     </header>
+   
+    <main class="contenedor">
+        <section class="cabecera">
+            <img class="logo" src="./assets/Logo.png" alt="logo de alura">  
+        </section>
+        <section class="seccion_1">
+           
+                 <textarea type="text" onkeypress="return 'abcdefghijklmnñopqrstuvwxyz '.includes(event.key)"           
+                    id="textarea_Ingreso" class="texto_ingresado"  cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="mensaje_informacion">
+                <img class="signo_advertencia" src="./assets/bi_exclamation-circle-fill.png" alt="signo de exclamación">
+                <h5 >Solo letras minúsculas y sin acentos</h5>
+
+            </div>
+            <div class="botones">
+                <button class="boton_encriptar" style="cursor:pointer" onclick="botonEncriptarTexto();"
+                id="botonEncriptar">
+                    Encriptar
+                </button>
+                <button class="boton_desencriptar" id="botonDesencriptar" onclick="botonDesencriptarTexto();">
+                    Desencriptar
+                </button>
+            </div>
+        </section>        
+        <section class="seccion_2">
+            <p class="saludo">Mi proyecto de Alura</p>
+            <div class="encriptado" id="div_Resultado_Encriptado">
+                
+                <div class="mensaje-encriptado" id="mensaje-encriptado">
+                    <p id="parrafoEncriptado">
+                        Ingresa el texto que deseas encriptar o desencriptar
+                    </p>
+                    <h2 class="titulo_mensaje"  id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                  
+                </div>
+                
+            </div>
+                    <button class="boton_Copiar" style="cursor:pointer" hidden id="botonCopiar" onclick="copiarTextoEncriptado();">
+                        Copiar
+                    </button>
+        </section>
+    </main>
+    <footer >
+        <div class="divPie">Desarrollado por Manfre Willian Meca Bautista</div>
+     
+     </footer>
+</body>
+ 
+</html>
